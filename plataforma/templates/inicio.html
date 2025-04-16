@@ -1,0 +1,38 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>{% block title %}AvanzaU{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
+</head>
+<body>
+    <header>
+        <h1>AvanzaU</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/login/">Iniciar Sesión</a></li>
+                <li><a href="/dashboard/">Dashboard</a></li>
+                <li><a href="/home/">Home</a></li>
+                <li><a href="/registro/">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Contenido específico de cada página -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AvanzaU. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
